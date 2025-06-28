@@ -1,6 +1,9 @@
 import streamlit as st
 from transformers import pipeline
 
+# ✅ Load the Transformer summarization model
+summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+
 # Set page configuration
 st.set_page_config(page_title="Text Summarizer", layout="centered")
 st.markdown(
